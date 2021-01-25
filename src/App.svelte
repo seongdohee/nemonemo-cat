@@ -1,9 +1,12 @@
-<script>
-	export let name;
+<script lang="ts">
+  import CatPuzzle from './components/Puzzle.svelte';
+  import test from './__data__/cat.json';
+
 </script>
 
 <main>
 	<h1>네모네모 고먐미의 저주</h1>
+	<CatPuzzle data={test} />
 </main>
 
 <style>

@@ -4,6 +4,7 @@ import resolve from '@rollup/plugin-node-resolve';
 import livereload from 'rollup-plugin-livereload';
 import { terser } from 'rollup-plugin-terser';
 import css from 'rollup-plugin-css-only';
+import json from 'rollup-plugin-json';
 
 const production = !process.env.ROLLUP_WATCH;
 
@@ -29,7 +30,7 @@ function serve() {
 }
 
 export default {
-	input: 'src/main.ts',
+	input: 'src/main.js',
 	output: {
 		sourcemap: true,
 		format: 'iife',
@@ -68,7 +69,25 @@ export default {
 
 		// If we're building for production (npm run build
 		// instead of npm run dev), minify
-		production && terser()
+		production && terser(),
+		json({
+			// All JSON files will be parsed by default,
+			// but you can also specifically include/exclude files
+
+			// for tree-shaking, properties will be declared as
+			// variables, using either `var` or `const`
+			preferConst: true, // Default: false
+
+			// specify indentation for the generated default export —
+			// defaults to '\t'
+			indent: '  ',
+
+			// ignores indent and generates the smallest code
+			compact: true, // Default: false
+
+			// generate a named export for every property of the JSON object
+			namedExports: true // Default: true
+		})
 	],
 	watch: {
 		clearScreen: false
