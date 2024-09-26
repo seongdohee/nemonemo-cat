@@ -57,9 +57,9 @@ export default function Home() {
   return (
     <div>
       <h1 className={styles.title}>
-        <Image src={logo} width={40} height={40}/>
+        <Image src={logo} width={40} height={40} alt="로고"/>
         NEMO NEMO CAT NONOGRAM
-        <Image src={logo} width={40} height={40}/>
+        <Image src={logo} width={40} height={40} alt="로고"/>
       </h1>
 
       <div className={styles.board}>
