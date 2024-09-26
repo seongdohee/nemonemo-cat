@@ -3,8 +3,9 @@ import Image from "next/image";
 import logo from '@/app/assets/images/nemonemo-cat.png';
 import * as styles from '@/app/page.css';
 import data from '@/data/index.json';
+import {Data} from '@/types';
 
-const generateRowHints = (data) => {
+const generateRowHints = (data: Data[][]) => {
   return data.map(row => {
     const hints = [];
     let count = 0;
@@ -24,7 +25,7 @@ const generateRowHints = (data) => {
   });
 };
 
-const generateColHints = (data) => {
+const generateColHints = (data: Data[][]) => {
   const colHints = [];
   const numCols = data[0].length;
 
@@ -53,7 +54,6 @@ export default function Home() {
   const rowHints = generateRowHints(data);
   const colHints = generateColHints(data);
 
-  console.log(rowHints, colHints);
   return (
     <div>
       <h1 className={styles.title}>
