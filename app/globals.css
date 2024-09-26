@@ -1,27 +1,12 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jersey+10&family=Varela+Round&display=swap');
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-}
+  /*font-family: "Varela Round", sans-serif;*/
+  /*font-weight: 400;*/
+  /*font-style: normal;*/
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+  font-family: "Jersey 10", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
