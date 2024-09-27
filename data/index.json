@@ -393,12 +393,12 @@
       "opened": false
     },
     {
-      "filled": true,
+      "filled": false,
       "color": "#ffffff",
       "opened": false
     },
     {
-      "filled": false,
+      "filled": true,
       "color": "#635a49",
       "opened": false
     },
@@ -450,7 +450,7 @@
       "opened": false
     },
     {
-      "filled": true,
+      "filled": false,
       "color": "#e5cdb9",
       "opened": false
     },
@@ -460,7 +460,7 @@
       "opened": false
     },
     {
-      "filled": false,
+      "filled": true,
       "color": "#210e0a",
       "opened": false
     },

@@ -1,7 +1,5 @@
-import { style } from '@vanilla-extract/css';
-
-export const flexCenter = style({
+export const flexCenter = {
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
-});
+}
